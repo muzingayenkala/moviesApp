@@ -27,6 +27,10 @@ CREATE DATABASE "Movies"
 GRANT ALL ON DATABASE "Movies" TO "moviesAdmin";
 GRANT ALL ON DATABASE "Movies" TO public;
 
+The SQL command to creat the table is as follows:
+
+"CREATE TABLE movieList(id SERIAL PRIMARY KEY, Title VARCHAR(40) NOT NULL, Year VARCHAR(40) NOT NULL)"
+
 The backend for the application is in the server folder and runs on port 3000. Navigate to that folder in command prompt and run the 
 command 'nodemon' to start the server after doing an npm install in the directory from command prompt.
 
