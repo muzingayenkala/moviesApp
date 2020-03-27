@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Movie Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      {{movie.id}} 
+      <ion-card-title>{{movie.title}}</ion-card-title>
+      {{movie.year}}
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-buttons slot="primary">
+        <ion-button routerLink="/edit/{{movie.id}}">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-button>
+        <ion-button (click)="delete(movie.id)">
+          <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-card-content>
+  </ion-card>
+</ion-content> 

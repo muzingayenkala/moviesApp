@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Movie List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let mv of movies" routerLink="/detail/{{mv.id}}">
+      <ion-icon name="desktop" slot="start"></ion-icon>
+      {{mv.title}}
+      <div class="item-note" slot="end">
+        {{mv.year}}
+      </div>
+    </ion-item>
+  </ion-list>
+
+    <div *ngIf="selectedItem" padding>
+      You navigated here from <b>{{selectedItem.id }}</b>
+    </div>
+ 
+</ion-content>
