@@ -11,6 +11,22 @@ database: 'Movies',
 password: 'admin',
 port: '5432'
 
+Also below is the SQL command to create the database should the import fail on pgAdmin:
+
+-- Database: "Movies"
+
+-- DROP DATABASE "Movies";
+
+CREATE DATABASE "Movies"
+  WITH OWNER = "moviesAdmin"
+       ENCODING = 'UTF8'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'English_South Africa.1252'
+       LC_CTYPE = 'English_South Africa.1252'
+       CONNECTION LIMIT = -1;
+GRANT ALL ON DATABASE "Movies" TO "moviesAdmin";
+GRANT ALL ON DATABASE "Movies" TO public;
+
 The backend for the application is in the server folder and runs on port 3000. Navigate to that folder in command prompt and run the 
 command 'nodemon' to start the server after doing an npm install in the directory from command prompt.
 
