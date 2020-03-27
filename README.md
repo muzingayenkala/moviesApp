@@ -12,6 +12,6 @@ password: 'admin',
 port: '5432'
 
 The backend for the application is in the server folder and runs on port 3000. Navigate to that folder in command prompt and run the 
-command 'nodemon' to start the server.
+command 'nodemon' to start the server after doing an npm install in the directory from command prompt.
 
-The ionic front end is in the app folder. Navigate into that folder and run the 'ionic serve' command.
+The ionic front end is in the app folder. Navigate into that folder and run the 'ionic serve' command after doing an npm install in the directory from command prompt.
